@@ -40,7 +40,7 @@ class ProductController extends Controller
         if($validator->fails()){
             return Response::json([
                 "errors" => $validator->errors()
-            ]);
+            ], 400);
         }
 
         $validated = $validator->validated();
@@ -85,7 +85,7 @@ class ProductController extends Controller
         if($validator->fails()){
             return Response::json([
                 "errors" => $validator->errors()
-            ]);
+            ], 400);
         }
 
         $validated = $validator->validated();
